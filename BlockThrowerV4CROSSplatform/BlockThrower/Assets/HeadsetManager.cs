@@ -10,13 +10,13 @@ public class HeadsetManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if(VRDevice.model == "vive")
+        if(UnityEngine.XR.XRDevice.model == "vive")
         {
             viveRig.SetActive(true);
             oculusRig.SetActive(false);
             hmdChosen = true;
         }
-        else if(VRDevice.model == "oculus")
+        else if(UnityEngine.XR.XRDevice.model == "oculus")
         {
             oculusRig.SetActive(true);
             viveRig.SetActive(false);
@@ -29,20 +29,20 @@ public class HeadsetManager : MonoBehaviour {
 	void Update () {
         if (!hmdChosen)
         {
-            if (VRDevice.model == "vive")
+            if (UnityEngine.XR.XRDevice.model == "vive")
             {
                 viveRig.SetActive(true);
                 oculusRig.SetActive(false);
                 hmdChosen = true;
             }
-            else if (VRDevice.model == "oculus")
+            else if (UnityEngine.XR.XRDevice.model == "oculus")
             {
                 oculusRig.SetActive(true);
                 viveRig.SetActive(false);
                 hmdChosen = true;
             }
         }
-        if (!VRDevice.isPresent)
+        if (!UnityEngine.XR.XRDevice.isPresent)
         {
             hmdChosen = false;
             //Do code to sync up the CameraRigs states 
