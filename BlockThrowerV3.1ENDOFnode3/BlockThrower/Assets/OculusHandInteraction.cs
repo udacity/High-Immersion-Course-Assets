@@ -36,7 +36,7 @@ public class OculusHandInteraction : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        device = SteamVR_Controller.Input((int)trackedObj.index);
+        //device = SteamVR_Controller.Input((int)trackedObj.index);
         if (leftHand)
         {
             menuStickX = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick,
@@ -103,7 +103,7 @@ public class OculusHandInteraction : MonoBehaviour {
     {
         coli.transform.SetParent(gameObject.transform);
         coli.GetComponent<Rigidbody>().isKinematic = true;
-        device.TriggerHapticPulse(2000);
+        //device.TriggerHapticPulse(2000);
         Debug.Log("You are touching down the trigger on an object");
     }
     void ThrowObject(Collider coli)
