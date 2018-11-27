@@ -6,8 +6,17 @@ This project is a collection of projects that are part of [Udacity](https://www.
 - Steam
 
 ## Changes
-Removed the extra camera from scenes. 
-Commented out SteamVR lines in the OculusHandInteraction script to avoid generating NullReferenceExceptions.
+Across all projects:
+- Removed the extra camera from scenes.
+
+In BlockThrowerV3.1ENDOFnode3: 
+- Commented out SteamVR lines in the OculusHandInteraction script to avoid generating NullReferenceExceptions.
+- Set Oculus camera tracking to "Floor Level" to ensure that our camera rig isn't stuck in the floor in play mode.
+
+In BlockThrowerV4CROSSplatform: 
+- Commented out SteamVR lines in the OculusHandInteraction script to avoid generating NullReferenceExceptions.
+- Set Oculus camera tracking to "Floor Level" to ensure that our camera rig isn't stuck in the floor in play mode.
+- Added an extra conditional in the start method of HeadsetManager to ensure the conditional works as expected. 
 
 ## SteamVR v1.0
 
@@ -17,6 +26,6 @@ Commented out SteamVR lines in the OculusHandInteraction script to avoid generat
 3. BlockThrowerV2.5 - Everything the previous project has + menu works by touching the touchpad. Pressing down spawns the objects. 
 4. BlockThrowerV2.9SCENELOAD - Everything the previous project has + Changes scenes when touching the touchpad. 
 5. BlockThrowerV3.1ENDOFnode3 - Everything the previous project has + Ads an Oculus specific camera rig with the OculusHandInteraction script. Oculus Rift users can pick up and grab blocks with the headset. (Vive users will need to enable the SteamVR camera rig.)
-6. BlockThrowerV4CROSSplatform - 
+6. BlockThrowerV4CROSSplatform - Everything the previous project has +  Has a HeadsetManager script to switch between headsets. 
 7. LocomotionV1 - 
 

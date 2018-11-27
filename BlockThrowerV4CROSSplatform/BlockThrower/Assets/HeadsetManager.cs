@@ -10,13 +10,13 @@ public class HeadsetManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if(UnityEngine.XR.XRDevice.model == "vive")
+        if(UnityEngine.XR.XRDevice.model == "vive" || UnityEngine.XR.XRSettings.loadedDeviceName.Contains("Vive"))
         {
             viveRig.SetActive(true);
             oculusRig.SetActive(false);
             hmdChosen = true;
         }
-        else if(UnityEngine.XR.XRDevice.model == "oculus")
+        else if(UnityEngine.XR.XRDevice.model == "oculus" || UnityEngine.XR.XRSettings.loadedDeviceName.Contains("Oculus"))
         {
             oculusRig.SetActive(true);
             viveRig.SetActive(false);
