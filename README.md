@@ -14,4 +14,6 @@ Removed the extra camera from scenes.
 1. BlockThowerV1 - SteamVR is set up and players have the ability to pick up and throw blocks. 
 2. BlockThrowerV2.1 - Everything the previous project has + some initial work on the menu system.
 3. BlockThrowerV2.5 - Everything the previous project has + menu works by touching the touchpad. Pressing down spawns the objects. 
+4. BlockThrowerV2.9SCENELOAD - Everything the previous project has + Changes scenes when touching the touchpad. 
+
 
